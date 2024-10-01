@@ -103,7 +103,7 @@ namespace MVCwithData.Controllers
 
         public ActionResult Create(Ulke model)
         {
-            string qry = "insert into Ulke(UlkeId,UlkeAd) VALUES (@UlkeId,@Ulkead) ";
+            string qry = "insert into Ulke(UlkeId,UlkeAd) VALUES (@UlkeId,@UlkeAd) ";
             con.ExecuteScalar<int>(qry, model);
             return RedirectToAction("List");   //List metoduna geridönüyor
 
