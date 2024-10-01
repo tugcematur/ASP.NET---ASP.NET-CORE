@@ -69,7 +69,7 @@ namespace MVCwithData.Controllers
 
         public ActionResult Delete(string id)   //id yi alır.
         {
-            string qry = $"select * from Ulke where UlkeId = '{id}'";//id değişken oldu için {} içinde yazılır.Değişken Char is '' içinde yazmayı unutma!!!!!
+            string qry = $"Delete * from Ulke where UlkeId = '{id}'";//id değişken oldu için {} içinde yazılır.Değişken Char is '' içinde yazmayı unutma!!!!!
             var ulke = con.Query<Ulke>(qry).First();
             return View(ulke);
         }
